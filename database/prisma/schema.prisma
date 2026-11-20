@@ -1,0 +1,174 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+}
+model Account {
+  id Int @id @default(autoincrement())
+  role String @db.VarChar(10)
+  email String? @db.VarChar(254)
+  phone String? @unique @db.VarChar(16)
+  googleSubject String? @unique @db.VarChar(255)
+  name String
+  password String?
+  staffRole String? @db.VarChar(20)
+  authVersion Int @default(0)
+  mfaSecret String? @db.Text
+  lastStep Int @default(-1)
+  enrollmentHash String? @db.Char(64)
+  enrollmentExpiry DateTime?
+  challenges MfaChallenge[]
+  codes RecoveryCode[]
+  sessions Session[]
+  addresses Address[]
+  orders Order[]
+  cart Json?
+  wishlist Json?
+  @@unique([role,email])
+}
+model Session {
+  verified Boolean @default(false)
+  authVersion Int @default(0)
+  token String @id @db.Char(64)
+  expires DateTime
+  accountId Int
+  account Account @relation(fields:[accountId], references:[id], onDelete:Cascade)
+}
+model Category {
+  id Int @id @default(autoincrement())
+  name String @unique
+  products Product[]
+}
+model Collection {
+  id Int @id @default(autoincrement())
+  name String @unique
+  products Product[]
+}
+model Product {
+  id Int @id @default(autoincrement())
+  name String @default("")
+  slug String? @unique
+  description String @default("") @db.VarChar(4000)
+  price Int?
+  comparePrice Int?
+  state String @default("draft")
+  categoryId Int?
+  category Category? @relation(fields:[categoryId], references:[id])
+  collectionId Int?
+  collection Collection? @relation(fields:[collectionId], references:[id])
+  front String?
+  back String?
+  detail String?
+  measurements String? @db.Text
+  fitNotes String? @db.Text
+  composition String? @db.Text
+  care String? @db.Text
+  picturedColour String @default("")
+  revision Int @default(0)
+  variants Variant[]
+  @@index([state])
+}
+model Variant {
+  id Int @id @default(autoincrement())
+  productId Int
+  product Product @relation(fields:[productId],references:[id])
+  sku String @unique
+  size String
+  colour String
+  stock Int
+  active Boolean @default(true)
+  items OrderItem[]
+  @@unique([productId,size,colour])
+}
+model Address {
+  id Int @id @default(autoincrement())
+  accountId Int
+  account Account @relation(fields:[accountId],references:[id])
+  recipient String
+  phone String
+  line1 String
+  city String
+  state String
+  pin String
+}
+model Order {
+  id Int @id @default(autoincrement())
+  key String @db.Char(36)
+  accountId Int
+  account Account @relation(fields:[accountId],references:[id])
+  created DateTime @default(now())
+  status String @default("Placed")
+  payment String @default("Pending")
+  shipment String @default("Pending")
+  courier String @default("")
+  tracking String @default("")
+  notes String @default("") @db.VarChar(3000)
+  address Json
+  subtotal Int
+  shipping Int
+  total Int
+  currency String @default("INR")
+  items OrderItem[]
+  history OrderEvent[]
+  @@unique([accountId,key])
+}
+model OrderItem {
+  id Int @id @default(autoincrement())
+  orderId Int
+  order Order @relation(fields:[orderId],references:[id])
+  variantId Int
+  variant Variant @relation(fields:[variantId],references:[id])
+  name String
+  sku String
+  size String
+  colour String
+  price Int
+  quantity Int
+}
+model Settings {
+  id Int @id
+  name String @default("Selvedge")
+  brandColour String @default("#394134")
+  currency String @default("INR")
+  shipping Int @default(9900)
+  freeOver Int @default(299900)
+  cod Boolean @default(true)
+}
+model Upload {
+  filename String @id
+  created DateTime @default(now())
+}
+model MfaChallenge {
+ token String @id @db.Char(64)
+ accountId Int
+ account Account @relation(fields:[accountId],references:[id],onDelete:Cascade)
+ expires DateTime
+ secret String? @db.Text
+ authVersion Int
+ attempts Int @default(0)
+}
+model RecoveryCode {
+ digest String @id @db.Char(64)
+ accountId Int
+ account Account @relation(fields:[accountId],references:[id],onDelete:Cascade)
+}
+model OrderEvent {
+ id Int @id @default(autoincrement())
+ orderId Int
+ order Order @relation(fields:[orderId],references:[id],onDelete:Cascade)
+ status String
+ occurred DateTime?
+ @@index([orderId,id])
+}
+model Audit {
+ id Int @id @default(autoincrement())
+ actorId Int
+ action String
+ recordId Int
+ created DateTime @default(now())
+ before Json
+ after Json
+ @@index([actorId,created])
+}

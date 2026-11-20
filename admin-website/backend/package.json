@@ -1,0 +1,14 @@
+{
+  "name": "admin-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc --noEmit && esbuild src/server.ts --bundle --packages=external --platform=node --format=esm --outfile=dist/server.js",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

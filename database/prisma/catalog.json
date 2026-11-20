@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "dune-camp-shirt",
+    "name": "Dune Camp Shirt",
+    "category": "Shirts",
+    "collection": "Coastal Forms",
+    "colour": "Sand",
+    "price": 2490,
+    "description": "A relaxed camp-collar shirt in sand linen with coconut buttons."
+  },
+  {
+    "slug": "ink-column-dress",
+    "name": "Ink Column Dress",
+    "category": "Dresses",
+    "collection": "City Uniform",
+    "colour": "Ink",
+    "price": 3490,
+    "description": "A sleeveless ink-black cotton column dress with a square neckline."
+  },
+  {
+    "slug": "chalk-pocket-tee",
+    "name": "Chalk Pocket Tee",
+    "category": "T-shirts",
+    "collection": "Daily Ritual",
+    "colour": "Chalk",
+    "price": 1290,
+    "description": "A chalk heavyweight crewneck tee with a single chest pocket."
+  },
+  {
+    "slug": "olive-pleat-trouser",
+    "name": "Olive Pleat Trouser",
+    "category": "Trousers",
+    "collection": "City Uniform",
+    "colour": "Olive",
+    "price": 2890,
+    "description": "Olive twill trousers with a single front pleat and tapered legs."
+  },
+  {
+    "slug": "clay-box-shirt",
+    "name": "Clay Box Shirt",
+    "category": "Shirts",
+    "collection": "Coastal Forms",
+    "colour": "Clay",
+    "price": 2390,
+    "description": "A boxy clay poplin shirt with a clean collar and straight hem."
+  },
+  {
+    "slug": "sage-weekend-set",
+    "name": "Sage Weekend Set",
+    "category": "Co-ords",
+    "collection": "Coastal Forms",
+    "colour": "Sage",
+    "price": 4190,
+    "description": "A matching sage linen camp shirt and drawstring shorts."
+  },
+  {
+    "slug": "carbon-loop-hoodie",
+    "name": "Carbon Loop Hoodie",
+    "category": "Hoodies",
+    "collection": "Daily Ritual",
+    "colour": "Charcoal",
+    "price": 2990,
+    "description": "A charcoal loopback pullover hoodie with a kangaroo pocket."
+  },
+  {
+    "slug": "oat-rib-tee",
+    "name": "Oat Rib Tee",
+    "category": "T-shirts",
+    "collection": "Daily Ritual",
+    "colour": "Oat",
+    "price": 1490,
+    "description": "An oat ribbed short-sleeve tee with a narrow crew neck."
+  },
+  {
+    "slug": "marine-stripe-shirt",
+    "name": "Marine Stripe Shirt",
+    "category": "Shirts",
+    "collection": "Coastal Forms",
+    "colour": "Blue",
+    "price": 2590,
+    "description": "Blue and white pinstripes run through this long-sleeve cotton shirt."
+  },
+  {
+    "slug": "terracotta-wrap-dress",
+    "name": "Terracotta Wrap Dress",
+    "category": "Dresses",
+    "collection": "Coastal Forms",
+    "colour": "Terracotta",
+    "price": 3690,
+    "description": "A terracotta wrap midi dress with a side tie and short sleeves."
+  },
+  {
+    "slug": "stone-wide-trouser",
+    "name": "Stone Wide Trouser",
+    "category": "Trousers",
+    "collection": "City Uniform",
+    "colour": "Stone",
+    "price": 3090,
+    "description": "Stone linen wide-leg trousers with a tailored waistband."
+  },
+  {
+    "slug": "forest-zip-hoodie",
+    "name": "Forest Zip Hoodie",
+    "category": "Hoodies",
+    "collection": "Daily Ritual",
+    "colour": "Forest",
+    "price": 3290,
+    "description": "A forest-green zip hoodie in brushed cotton with split front pockets."
+  },
+  {
+    "slug": "midnight-lounge-set",
+    "name": "Midnight Lounge Set",
+    "category": "Co-ords",
+    "collection": "Daily Ritual",
+    "colour": "Navy",
+    "price": 3990,
+    "description": "A navy cotton matching short-sleeve knit polo and full-length lounge trousers."
+  },
+  {
+    "slug": "ecru-scoop-tee",
+    "name": "Ecru Scoop Tee",
+    "category": "T-shirts",
+    "collection": "Daily Ritual",
+    "colour": "Ecru",
+    "price": 1190,
+    "description": "An ecru jersey tee with a scoop neck and soft curved hem."
+  },
+  {
+    "slug": "umber-work-shirt",
+    "name": "Umber Work Shirt",
+    "category": "Shirts",
+    "collection": "City Uniform",
+    "colour": "Umber",
+    "price": 2790,
+    "description": "An umber cotton overshirt with two flap pockets and dark buttons."
+  },
+  {
+    "slug": "fig-slip-dress",
+    "name": "Fig Slip Dress",
+    "category": "Dresses",
+    "collection": "City Uniform",
+    "colour": "Fig",
+    "price": 3190,
+    "description": "A deep plum bias-cut satin slip dress with fine shoulder straps."
+  },
+  {
+    "slug": "graphite-cargo-trouser",
+    "name": "Graphite Cargo Trouser",
+    "category": "Trousers",
+    "collection": "City Uniform",
+    "colour": "Graphite",
+    "price": 3190,
+    "description": "Graphite straight-leg cotton cargos with a flap pocket on each thigh."
+  },
+  {
+    "slug": "amber-raglan-hoodie",
+    "name": "Amber Raglan Hoodie",
+    "category": "Hoodies",
+    "collection": "Daily Ritual",
+    "colour": "Amber",
+    "price": 2890,
+    "description": "An amber fleece pullover hoodie with raglan sleeves and a pouch pocket."
+  },
+  {
+    "slug": "seafoam-tank-set",
+    "name": "Seafoam Tank Set",
+    "category": "Co-ords",
+    "collection": "Coastal Forms",
+    "colour": "Seafoam",
+    "price": 3890,
+    "description": "A pale seafoam matching square-neck tank and flowing midi skirt."
+  },
+  {
+    "slug": "rust-henley-tee",
+    "name": "Rust Henley Tee",
+    "category": "T-shirts",
+    "collection": "Daily Ritual",
+    "colour": "Rust",
+    "price": 1590,
+    "description": "A rust jersey short-sleeve Henley with a three-button placket."
+  }
+]

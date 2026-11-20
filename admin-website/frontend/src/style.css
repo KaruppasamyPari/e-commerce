@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font:
+    16px/1.5 "Segoe UI",
+    Arial,
+    sans-serif;
+  color: #252c24;
+  background: #f5f5f0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+.brand {
+  font:
+    400 2.65rem/1.12 Georgia,
+    serif;
+  letter-spacing: -0.045em;
+}
+h2 {
+  font-size: 1.65rem;
+  text-transform: none;
+  margin: 0 0 18px;
+}
+h1 {
+  margin: 12px 0 24px;
+}
+a {
+  color: #354a32;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.shell {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  min-height: 100dvh;
+}
+.shell aside {
+  padding: 35px 20px;
+  background: #293329;
+  color: #fcf9ed;
+}
+.brand {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0.8rem 0 1.25rem;
+}
+nav {
+  display: grid;
+  gap: 3px;
+  margin: 32px 0;
+}
+nav a,
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+nav a {
+  color: inherit;
+  padding: 11px;
+  text-decoration: none;
+  font-size: 0.94rem;
+  border-radius: 3px;
+}
+nav .active {
+  background: #ffffff1f;
+}
+.shell main > header {
+  padding: 18px 4vw;
+  background: white;
+  border-bottom: 1px solid #deded5;
+  display: flex;
+  justify-content: space-between;
+}
+.shell main > article {
+  padding: 35px 4vw;
+}
+.head,
+.tools,
+.actions,
+.variant {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.head {
+  justify-content: space-between;
+}
+.head .eyebrow {
+  margin-bottom: 4px;
+}
+.metrics,
+.fields,
+.slots {
+  display: grid;
+  gap: 14px;
+}
+.metrics {
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px 0;
+}
+.metrics a,
+.box,
+.scroll,
+.login {
+  background: #fffefa;
+  border: 1px solid #dddfd3;
+  padding: 20px;
+}
+.metrics a {
+  text-decoration: none;
+}
+.metrics strong {
+  display: block;
+  font:
+    2.1rem Georgia,
+    serif;
+  margin-top: 12px;
+}
+.box {
+  margin: 18px 0;
+}
+.scroll {
+  overflow: auto;
+  max-width: 100%;
+  padding: 0;
+}
+.box .scroll {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.93rem;
+}
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #e1e2d9;
+  padding: 12px 14px;
+}
+th {
+  background: #edeee7;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+button {
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid #c9cebf;
+  background: #fbfcf5;
+  color: #293429;
+  cursor: pointer;
+  font: inherit;
+}
+.primary {
+  background: #394734;
+  color: white;
+  border-color: #394734;
+}
+button:disabled {
+  opacity: 0.55;
+}
+:focus-visible {
+  outline: 3px solid #9e823d;
+  outline-offset: 2px;
+}
+label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 0.89rem;
+  margin: 10px 0;
+}
+input:not([type="checkbox"]),
+select,
+textarea {
+  font: inherit;
+  width: 100%;
+  border: 1px solid #bfc6b6;
+  background: white;
+  color: #252c24;
+  padding: 9px 10px;
+  min-height: 42px;
+  margin-top: 4px;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+.tools {
+  margin: 14px 0;
+}
+.tools input,
+.tools select {
+  width: auto;
+  max-width: 100%;
+}
+.fields {
+  grid-template-columns: repeat(2, 1fr);
+}
+.slots {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.slots img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  background: #f2eee8;
+}
+.slots input {
+  font-size: 0.75rem;
+}
+.variant label {
+  flex: 1;
+  min-width: 72px;
+}
+.actions p {
+  width: 100%;
+}
+.low,
+[role="alert"] {
+  color: #914a2e;
+}
+.login {
+  width: min(92%, 450px);
+  margin: 12vh auto;
+  padding: 32px;
+}
+.scroll > p {
+  padding: 12px;
+}
+.box > p {
+  margin: 12px 0;
+}
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 185px minmax(0, 1fr);
+  }
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .slots {
+    grid-template-columns: 1fr;
+  }
+  .slots img {
+    max-width: 160px;
+  }
+  .shell main > article {
+    padding: 25px 3vw;
+  }
+}
+@media (max-width: 650px) {
+  .shell {
+    display: block;
+  }
+  .shell aside {
+    padding: 14px;
+  }
+  .shell aside .eyebrow {
+    display: none;
+  }
+  nav {
+    display: flex;
+    overflow: auto;
+    margin: 8px 0;
+  }
+  nav a {
+    white-space: nowrap;
+  }
+  .shell aside > button {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+  .fields {
+    grid-template-columns: 1fr;
+  }
+  .shell main > header {
+    font-size: 0.82rem;
+  }
+  .box {
+    padding: 14px;
+  }
+  .variant {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+  }
+  .variant label {
+    min-width: 40%;
+  }
+  .metrics {
+    gap: 8px;
+  }
+  .metrics a {
+    padding: 14px;
+  }
+}
